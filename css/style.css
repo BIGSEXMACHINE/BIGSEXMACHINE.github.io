@@ -1,0 +1,310 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.5);
+    background: whitesmoke;
+}
+
+a {
+    color: #302385;
+    transition: 0.5s;
+}
+
+a:hover, a:active, a:focus {
+    color: #302385;
+    outline: none;
+    text-decoration: none !important;
+}
+
+p {
+    margin-bottom: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+#page {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#menu {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    width: 20%;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: 0.5s;
+    background-color: #efefef;
+}
+
+#menu #menu-header {
+    text-align: center;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 38px;
+}
+
+#menu #menu-header a {
+    text-decoration: none;
+    color: #000;
+}
+
+#menu #menu-header a span {
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#menu #main-menu ul {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#menu #main-menu ul li {
+    margin: 0 0 20px 0;
+    padding: 0;
+    list-style: none;
+}
+
+#menu #main-menu ul li a {
+    color: rgba(0, 0, 0, 0.9);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    position: relative;
+    padding: 10px 10px;
+    letter-spacing: .2em;
+    font-family: "Roboto", Arial, sans-serif;
+    transition: 0.3s;
+}
+
+#menu #main-menu ul li a:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: 7px;
+    left: 10px;
+    right: 10px;
+    background-color: #302385;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#menu #main-menu ul li a:hover:after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+#menu #main-menu ul li.menu-active a {
+    color: #302385;
+}
+
+#menu #main-menu ul li.menu-active a:after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+#menu .menu-footer {
+    position: absolute;
+    bottom: 40px;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.6);
+    padding: 0 20px;
+}
+
+#menu .menu-footer span {
+    display: block;
+}
+
+#menu .menu-footer ul {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#menu .menu-footer ul li {
+    padding: 0;
+    margin: 0;
+    display: inline;
+    list-style: none;
+}
+
+#menu .menu-footer ul li a {
+    color: rgba(0, 0, 0, 0.7);
+    padding: 4px;
+}
+
+#menu .menu-footer ul li a:hover, #menu .menu-footer ul li a:active, #menu .menu-footer ul li a:focus {
+    text-decoration: none;
+    outline: none;
+    color: #302385;
+}
+
+#main {
+    width: 80%;
+    float: right;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.card-content {
+    text-align: left;
+    width: 100%;
+    float: left;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.card-content .card-text {
+    padding-left: 120px;
+    width: 100%;
+}
+
+.card-content .card-text h2, .card-content .card-text h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.card-content .card-text h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 14px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+.header-secondary {
+    font-size: 18px;
+    margin-bottom: 2em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.header-primary {
+    font-size: 36px;
+    margin-bottom: 2em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.header-secondary span {
+    display: block;
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        grid-template-columns: 1fr !important;
+        margin-top: 100px;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+.card-img {
+    padding: 10px;
+    width: 100px;
+    display: flex;
+    float: left;
+    margin-bottom: -100px;
+}
+
+.card{
+    background-color: transparent;
+    border: transparent;
+}
+
+hr{
+    margin: 0 20px;
+}
+
+section{
+    padding: 80px;
+}
+
+section.color{
+    background-color: #544996;
+}
+
+section.color h1, section.color h2, section.color p, section.color ul, section.color li{
+    color: #ffffff;
+}
+
+hr.color{
+    color: #302385;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.container img{
+    width: 100% !important;
+}
+
+.infoandroid{
+    font-size: large;
+}
+
+section.color2{
+    background-color: #ffffff;
+}
+
+.presentation{
+    font-size: larger;
+}
+
+section.color3{
+    background-color: #6bb9c2;
+}
+
+#Nedostatkiios{
+    font-size: large;
+}
+
+.gif{
+    align-content: center;
+}
+
+.windows-color{
+    color: #00a2e7;
+}
+
+section.color4{
+    background-color: #b1c9cd;
+}
